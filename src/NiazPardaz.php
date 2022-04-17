@@ -13,9 +13,9 @@ class NiazPardaz implements GatewayInterface
     public function __construct() {
         ini_set("soap.wsdl_cache_enabled", "0");
 
-        $this->webservice = config('niazpardaz.webservice');
-        $this->username = config('niazpardaz.username');
-        $this->password = config('niazpardaz.password');
+        $this->webservice = config('niazpardaz.sms.webservice');
+        $this->username = config('niazpardaz.sms.username');
+        $this->password = config('niazpardaz.sms.password');
     }
 
     public function sendMessageUrl(array $numbers, $text, $sender ){
